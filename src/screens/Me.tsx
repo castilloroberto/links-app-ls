@@ -28,6 +28,14 @@ export const Me = () => {
                     <li className="list-group-item">Host</li>
                 </ul>
             </div>
+            <div className="card mt-4">
+                <div className="card-body">
+                    <h5 className="card-title">LocalStorage</h5>
+                </div>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item">Guardar links</li>
+                </ul>
+            </div>
         </div>
     )
 }
