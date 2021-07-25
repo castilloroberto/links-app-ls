@@ -23,8 +23,7 @@ export const Card: FC<CardProps> = ({
             console.log('click');
             
             if(url.startsWith('http' || 'meet.google')){
-                window.location.href = url;
-                
+                window.open(url);   
             }
         }
 
@@ -58,7 +57,6 @@ const styles:StylesProps = {
     body:{
         display:'flex',
         justifyContent:'space-between',
-        marginRight:5
     },
     btn:{
         height:38,

@@ -15,12 +15,10 @@ export const Home: React.FC<HomeProps> = ({}) => {
             const json = localStorage.getItem('links')
             
             if(json !== null && json !== '[]'){
-                console.log('if');
                 
                 setItems(JSON.parse(json))
             }
             else{
-                console.log('else');
                 
                 setItems([{
                     Title:'Click aqui',
@@ -53,8 +51,9 @@ export const Home: React.FC<HomeProps> = ({}) => {
 
                 <div className="list" 
                     style={{
-                        overflowY:'scroll',
-                        height:500
+                        overflowY:'auto',
+                        height:500,
+                        padding:5
                     }}>
                     {
                         renderItems()

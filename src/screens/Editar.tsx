@@ -53,7 +53,7 @@ export const Editar: React.FC<EditarProps> = ({}) => {
                     ): (
                         <div style={styles.center} >
 
-                        <div className="list" style={{overflowY:'scroll',height:500}}>
+                        <div className="list" style={{overflowY:'auto',height:500,padding:5}}>
                             {
                                 Items.map( ( item, i ) => <Card deleteItem={() => deleteItem(i)} Link={item} key={i}/> )
                             }
