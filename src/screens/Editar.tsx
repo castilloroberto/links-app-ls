@@ -19,9 +19,7 @@ export const Editar: React.FC<EditarProps> = ({}) => {
             
             const json = localStorage.getItem('links')
             
-            if(json !== null && json !== '[]'){
-                console.log('if');
-                
+            if(json !== null && json !== '[]'){ 
                 setItems(JSON.parse(json))
             }
           
@@ -38,7 +36,7 @@ export const Editar: React.FC<EditarProps> = ({}) => {
         const addItem = ({Hora,Link,Title}:Link )=>{
         
             setItems([{Title,Hora,Link},...Items])
-           
+            setShow(!show)
         }
 
         const deleteItem = (id:number)=>{
@@ -53,24 +51,26 @@ export const Editar: React.FC<EditarProps> = ({}) => {
                             <LinkForm addItem={addItem}/>
                         </div>
                     ): (
+                        <div style={styles.center} >
+
                         <div className="list" style={{overflowY:'scroll',height:500}}>
                             {
                                 Items.map( ( item, i ) => <Card deleteItem={() => deleteItem(i)} Link={item} key={i}/> )
                             }
                         </div>
+                        <nav style={{width:'100vw'}}>
+                        <button onClick={() => setShow(!show)}
+                            style={{position:'absolute',right:45,bottom:100,width:100}}
+                            className="btn btn-success">
+                                Agregar
+                        </button>   
+    
+                        </nav>
+                    </div>
                     )
                 }
                 
-                <nav style={{width:'100vw'}}>
-                    <button onClick={() => setShow(!show)}
-                        style={{position:'absolute',right:45,bottom:100,width:100}}
-                        className="btn btn-success">
-                            { show ? 'Volver' : 'Agregar'  }
-                    </button>   
-
-                </nav>
-
-               
+        
             </div>
         )
 }
@@ -82,7 +82,7 @@ const styles:StylesProps = {
     center:{
         display:'flex',
         alignItems:'center',
-        justifyContent:'center',
+        // justifyContent:'center',
         flexDirection:'column',
         height:'70vh',
         margin:0,

@@ -46,7 +46,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
             <div style={{
                 display:'flex',
                 flexDirection:'column',
-                justifyContent:'center',
+                // justifyContent:'center',
                 alignItems:'center',
                 height:'70vh'
             }}>

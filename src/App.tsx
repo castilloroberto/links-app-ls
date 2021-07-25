@@ -1,4 +1,4 @@
-import react, { CSSProperties } from "react";
+import  { CSSProperties } from "react";
 import {
   BrowserRouter as Router,
   Switch,
