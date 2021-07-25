@@ -23,7 +23,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                 console.log('else');
                 
                 setItems([{
-                    Title:'Creador de esta app',
+                    Title:'Click aqui',
                     Hora:'1:00PM',
                     Link:'https://github.com/castilloroberto'
                 }])
