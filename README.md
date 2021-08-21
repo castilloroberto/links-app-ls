@@ -1,3 +1,10 @@
+# imagenes
+![1](public/img1.png)
+![2](public/img2.png)
+![3](public/img3.png)
+> Al dar click en un atrgeta nos redireccionaa la direccion proporcionada al crear la targeta
+
+![4](public/img4.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
